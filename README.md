@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# SellerFlow Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dashboard para gestão de estoque, vendas e movimentações em múltiplos marketplaces.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O **SellerFlow Hub** é um projeto front-end desenvolvido para simular a gestão centralizada de produtos vendidos em diferentes marketplaces, como Mercado Livre, Shopee, Amazon e SHEIN.
 
-## React Compiler
+A proposta é resolver um problema comum de pequenos e médios vendedores: a falta de controle unificado entre estoque físico, produtos anunciados e vendas realizadas em canais diferentes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Neste projeto, os dados serão inicialmente mockados para simular cenários reais de estoque, vendas e movimentações. Em etapas futuras, o front-end será conectado a uma API REST desenvolvida com Node.js.
 
-## Expanding the ESLint configuration
+## Problema que o projeto resolve
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Vendedores que atuam em múltiplos marketplaces podem ter dificuldade para controlar:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* estoque disponível;
+* produtos anunciados em diferentes canais;
+* saídas por venda;
+* devoluções;
+* ajustes manuais;
+* produtos com estoque baixo;
+* risco de vender produtos sem disponibilidade real.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O SellerFlow Hub centraliza essas informações em um dashboard visual e organizado.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tecnologias previstas
 
-```
+* React
+* TypeScript
+* JavaScript
+* Vite
+* CSS
+* JSON
+* Node.js
+* API REST
+* Git e GitHub
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Funcionalidades planejadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Dashboard com indicadores gerais
+* Lista de produtos
+* Controle de estoque
+* Registro de vendas
+* Movimentações de entrada e saída
+* Alertas de estoque baixo
+* Filtros por marketplace, categoria e status
+* Dados mockados em JSON
+* Consumo de API REST
+* Deploy do front-end
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Status do projeto
 
-```
+Em desenvolvimento.
+
+## Objetivo de aprendizado
+
+Este projeto está sendo desenvolvido como parte do meu processo de transição para a área de desenvolvimento front-end, com foco em React, TypeScript, consumo de APIs, organização de código e construção de interfaces baseadas em problemas reais de negócio.
