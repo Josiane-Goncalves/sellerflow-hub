@@ -1,0 +1,40 @@
+import type { Product } from "../types/product";
+
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    sku: "TEN-MIZ-001",
+    name: "Tênis Mizuno Wave Rider",
+    category: "Calçados",
+    costPrice: 320,
+    salePrice: 549.9,
+    stock: 8,
+    minStock: 5,
+    marketplaces: ["Mercado Livre", "Amazon", "Shopee"],
+    status: "ativo",
+  },
+  {
+    id: 2,
+    sku: "CAM-RBK-002",
+    name: "Camiseta Reebok Training",
+    category: "Vestuário",
+    costPrice: 45,
+    salePrice: 99.9,
+    stock: 3,
+    minStock: 6,
+    marketplaces: ["Shopee", "SHEIN"],
+    status: "ativo",
+  },
+  {
+    id: 3,
+    sku: "BOL-CEN-003",
+    name: "Bolsa Esportiva Centauro",
+    category: "Acessórios",
+    costPrice: 80,
+    salePrice: 159.9,
+    stock: 0,
+    minStock: 4,
+    marketplaces: ["Mercado Livre", "Loja física"],
+    status: "sem estoque",
+  },
+];
